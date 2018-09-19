@@ -25,8 +25,19 @@ public class Main {
 //        int day = in.nextInt();
 
         //7 , 8
-        System.out.println("Введите трехзначное число");
-        int value = in.nextInt();
+//        System.out.println("Введите трехзначное число");
+//        int value = in.nextInt();
+
+        //9
+//        System.out.println("Введите два вещественных числа: ");
+//        float x = in.nextFloat();
+//        float y = in.nextFloat();
+
+        //10
+        System.out.println("Введите 2 числа :");
+        int a = in.nextInt();
+        int b = in.nextInt();
+
 
         //Вывод методов
 //        function_1(a,b);
@@ -44,8 +55,11 @@ public class Main {
 
 //        function_7(value);
 
-        function_8(value);
+//        function_8(value);
 
+//        function_9(x ,  y);
+
+        function_10(a,b);
 
     }
     public static void function_1(int a , int b){
@@ -123,23 +137,23 @@ public class Main {
         int num1 = (value / 100);
         int num2 = (value/10)%10 ;
         int num3 = value % 10;
-        if(num1 > num3 && num1 != num3)
+        if(num1 > num3 )
             System.out.println("Первое значение : "+num1+" > "+num3+" : Третьего значения");
-        else if(num1 < num3 && num1!=num3)
+        else if(num1 < num3 )
             System.out.println("Третье значение : "+num3+" > "+num1+" : Первого значения");
         else
             System.out.println("Первое значение : "+num1+" = "+num3+" : Третьему значаению");
 
-        if(num1 > num2 && num1 != num2)
+        if(num1 > num2 )
             System.out.println("Первое значение : "+num1+" > "+num2+" : Второго значения");
-        else if(num1 < num2 && num1!=num2)
+        else if(num1 < num2 )
             System.out.println("Второе значение : "+num2+" > "+num1+" : Первого значения");
         else
             System.out.println("Первое значение : "+num1+" = "+num2+" : Второму значению");
 
-        if(num2 > num3 && num2 != num3)
+        if(num2 > num3 )
             System.out.println("Второе значение : "+num2+" > "+num3+" : Третьего значения");
-        else if(num2 < num3 && num2!=num3)
+        else if(num2 < num3 )
             System.out.println("Третье значение : "+num3+" > "+num2+" : Второго значения");
         else
             System.out.println("Второе значение : "+num2+" = "+num3+" : Третьему значаению");
@@ -159,5 +173,30 @@ public class Main {
         }
         else
             System.out.println("Они равны");
+    }
+
+    public static void function_9(float x, float y){
+        float a = x,b = y;
+        if(a != b){
+            if(a > b){
+                System.out.println("Число X больше числа Y");
+                b = (a+b)/2;
+                x = 2*a*y;
+                System.out.println("X: "+x+" Y: "+b);
+            }else{
+                System.out.println("Число Y больше числа X");
+                a = (a+b)/2;
+                y = 2*b*x;
+                System.out.println("X: "+a+" Y: "+y);
+            }
+        }  else
+            System.out.println("Числа X и Y равны");
+    }
+
+    public static void function_10(int a , int b){
+        int x0 = 0;
+        float x1 = (float) Math.sqrt(b/a);
+        float x2 = (float) - Math.sqrt(b/a);
+        System.out.println("X0: "+x0+" X1: "+x1+" X2: "+x2);
     }
 }
